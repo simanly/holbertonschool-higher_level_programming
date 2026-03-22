@@ -9,6 +9,7 @@ def fizzbuzz():
             res = "Buzz"
         else:
             res = i
+
         if i == 100:
             print("{}".format(res), end="")
         else:
