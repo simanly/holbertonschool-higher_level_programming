@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 def fizzbuzz():
     for i in range(1, 101):
-        res = "FizzBuzz" if i % 15 == 0 else "Fizz" if i % 3 == 0 else "Buzz" if i % 5 == 0 else i
-        print("{}".format(res), end="" if i == 100 else " ")
-    print("")
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz", end="")
+        elif i % 3 == 0:
+            print("Fizz", end="")
+        elif i % 5 == 0:
+            print("Buzz", end="")
+        else:
+            print("{}".format(i), end="")
+        print(" ", end="")
