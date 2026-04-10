@@ -3,8 +3,10 @@
 Module 0-square
 Defines a class square
 '''
+
 class Square:
     '''
     Empty class Square that defines a square
     '''
     pass
+
