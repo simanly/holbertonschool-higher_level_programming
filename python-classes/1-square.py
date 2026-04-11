@@ -12,3 +12,5 @@ class Square:
         Initializes the square data
         '''
         self.__size = size
+
+
