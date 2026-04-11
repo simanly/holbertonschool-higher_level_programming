@@ -21,3 +21,15 @@
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] distance must be greater than 0
+
+>>> try:
+...     bg.integer_validator("is_active", True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] is_active must be an integer
+
+>>> try:
+...     bg.integer_validator("info", [1, 2, 3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] info must be an integer
