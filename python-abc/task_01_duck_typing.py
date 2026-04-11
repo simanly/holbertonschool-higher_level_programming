@@ -1,23 +1,24 @@
 #!/usr/bin/python3
-from abc import ABC, abstractmethod
+"""
+Module for Shape, Circle, Rectangle and duck typing.
+"""
 import math
+from abc import ABC, abstractmethod
+
 
 class Shape(ABC):
-    """Abstract base class for geometric shapes."""
-
+    """Abstract class Shape"""
     @abstractmethod
     def area(self):
-        """Calculate the area of the shape."""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Calculate the perimeter of the shape."""
         pass
 
-class Circle(Shape):
-    """Concrete implementation of a Circle."""
 
+class Circle(Shape):
+    """Circle class inheriting from Shape"""
     def __init__(self, radius):
         self.radius = radius
 
@@ -27,9 +28,9 @@ class Circle(Shape):
     def perimeter(self):
         return 2 * math.pi * self.radius
 
-class Rectangle(Shape):
-    """Concrete implementation of a Rectangle."""
 
+class Rectangle(Shape):
+    """Rectangle class inheriting from Shape"""
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -40,11 +41,8 @@ class Rectangle(Shape):
     def perimeter(self):
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
-    """
-    Prints the area and perimeter of a shape.
-    Uses duck typing: as long as 'shape' has area() and perimeter(), 
-    it works, regardless of the class type.
-    """
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    """Prints area and perimeter using duck typing"""
+    print("Area: {}".format(shape.area()))
+    print("Perimeter: {}".format(shape.perimeter()))
