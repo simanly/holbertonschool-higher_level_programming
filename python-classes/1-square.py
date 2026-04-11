@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-'''
-Module that defines
-Square class
-'''
+"""
+This module defines a Square class.
+It focuses on the initialization of the private attribute size.
+"""
+
+
 class Square:
-    '''
-    A class that represents a square
-    '''
+    """
+    A class that represents a square.
+    """
+
     def __init__(self, size):
-        '''
-        Initializes the square data
-        '''
+        """
+        Initializes the square with a size.
+
+        Args:
+            size (int): The length of a side of the square.
+        """
         self.__size = size
-
-
