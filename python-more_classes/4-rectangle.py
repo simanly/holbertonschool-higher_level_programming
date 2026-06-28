@@ -7,7 +7,9 @@ and an official string representation for object recreation.
 
 
 class Rectangle:
-    """Defines a rectangle with geometric properties and serialization capability."""
+    """
+    Defines a rectangle with geometric properties and serialization capability
+    """
 
     def __init__(self, width=0, height=0):
         """Initializes a new Rectangle instance.
@@ -72,5 +74,7 @@ class Rectangle:
         return "\n".join(rect_lines)
 
     def __repr__(self):
-        """Returns a string representation to recreate the instance using eval()."""
+        """
+        Returns a string representation to recreate the instance using eval()
+        """
         return f"Rectangle({self.__width}, {self.__height})"
